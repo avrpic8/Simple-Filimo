@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity
 
         setSupportActionBar(toolbar);
     }
-    private void initFab(){
+    /*private void initFab(){
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -225,7 +225,7 @@ public class MainActivity extends AppCompatActivity
                         //.setAction("Action", null).show();
             }
         });
-    }
+    }*/
     private void initDrawer(){
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -487,7 +487,7 @@ public class MainActivity extends AppCompatActivity
 
         coordinatorLayout = findViewById(R.id.crd_layout);
         initToolBar();
-        initFab();
+        //initFab();
         initDrawer();
         initTextViews();
         initRecyclerView();
