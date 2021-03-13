@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/archive_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/archive_movie_layout_height"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/archive_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/pic1"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/archive_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/medium_margin"
+        tools:text="کمدی"
+        android:textSize="@dimen/archive_movie_layout_textSize"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/samim_bold_fd"/>
+
+    <TextView
+        android:id="@+id/archive_title_en"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/archive_title"
+        android:layout_alignRight="@+id/archive_title"
+        tools:text="Comedy"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/ubuntu_mono_bold"/>
+
+</RelativeLayout>

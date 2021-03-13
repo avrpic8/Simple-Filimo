@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="small_margin">3dp</dimen>
+    <dimen name="standard_margin">5dp</dimen>
+    <dimen name="medium_margin">8dp</dimen>
+    <dimen name="big_margin">16dp</dimen>
+
+
+
+    <dimen name="movie_layout_width">155dp</dimen>
+    <dimen name="movie_layout_small_with">115dp</dimen>
+    <dimen name="movie_layout_height">240dp</dimen>
+    <dimen name="movie_cover_width">155dp</dimen>
+    <dimen name="movie_cover_height">190dp</dimen>
+
+    <dimen name="movie_layout_textSize">14sp</dimen>
+    <dimen name="movie_layout_small_textSize">12sp</dimen>
+
+
+    <dimen name="archive_movie_layout_height">110dp</dimen>
+    <dimen name="archive_movie_layout_textSize">18sp</dimen>
+</resources>

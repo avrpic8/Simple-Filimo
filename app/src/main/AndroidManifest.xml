@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.smartelectronics.filimo"
+    android:label="Filimo">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <meta-data
+        android:name="com.parse.SERVER_URL"
+        android:value="@string/back4app_server_url" />
+    <meta-data
+        android:name="com.parse.APPLICATION_ID"
+        android:value="@string/back4app_app_id" />
+    <meta-data
+        android:name="com.parse.CLIENT_KEY"
+        android:value="@string/back4app_client_key" />
+
+    <application
+        android:name=".util.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name=".activity.BuyAccountActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="app"/>
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".activity.VideoPlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize" />
+        <activity
+            android:name=".activity.SingleMovieActivity"
+            android:label="@string/title_activity_single_movie"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.GenreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SubjectiveArchiveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FilmArchiveActivity"
+            android:label="@string/title_activity_film_archive"
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.smartelectronics.filimo.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.VerifyPhoneActivity" />
+        <activity android:name=".activity.SignUpActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

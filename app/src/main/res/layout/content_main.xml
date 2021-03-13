@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layoutDirection="rtl">
+
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/Slider"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:gravity="center"/>
+
+        <RelativeLayout
+             android:id="@+id/layout_new_move"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/big_margin"
+             android:layout_marginRight="@dimen/big_margin"
+             android:layout_marginLeft="@dimen/big_margin"
+             android:layout_marginBottom="@dimen/medium_margin">
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:text="تازه های فیلم"
+                 android:textSize="14sp"
+                 android:textStyle="bold"
+                 android:textColor="@android:color/black"
+                 android:clickable="true"
+                 android:fontFamily="@font/samim_bold_fd"/>
+             <TextView
+                 android:id="@+id/txt_more_new_move"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:text="بیشتر"
+                 android:textSize="14sp"
+                 android:textStyle="bold"
+                 android:textColor="@color/colorAccent"
+                 android:fontFamily="@font/samim_bold_fd"
+                 android:background="?attr/selectableItemBackgroundBorderless"
+                 android:clickable="true"/>
+
+         </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/new_movie_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layoutAnimation="@anim/layout_animation"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_new_movePersian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginRight="@dimen/big_margin"
+            android:layout_marginLeft="@dimen/big_margin"
+            android:layout_marginBottom="@dimen/medium_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="فیلم های ایرانی"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:clickable="true"
+                android:fontFamily="@font/samim_bold_fd"/>
+            <TextView
+                android:id="@+id/txt_more_new_movePersian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="بیشتر"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/samim_bold_fd"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"/>
+
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/persian_movie_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layoutAnimation="@anim/layout_animation"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_serial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginRight="@dimen/big_margin"
+            android:layout_marginLeft="@dimen/big_margin"
+            android:layout_marginBottom="@dimen/medium_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="سریال ها"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:clickable="true"
+                android:fontFamily="@font/samim_bold_fd"/>
+            <TextView
+                android:id="@+id/txt_more_serial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="بیشتر"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/samim_bold_fd"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"/>
+
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/persian_series_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layoutAnimation="@anim/layout_animation"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginRight="@dimen/big_margin"
+            android:layout_marginLeft="@dimen/big_margin"
+            android:layout_marginBottom="@dimen/medium_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="انیمیشن"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:clickable="true"
+                android:fontFamily="@font/samim_bold_fd"/>
+            <TextView
+                android:id="@+id/txt_more_animation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="بیشتر"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/samim_bold_fd"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"/>
+
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/animation_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layoutAnimation="@anim/layout_animation"/>
+
+    </LinearLayout>
+
+</ScrollView>

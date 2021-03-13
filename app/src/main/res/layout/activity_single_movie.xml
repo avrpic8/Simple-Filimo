@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="rtl">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <com.flaviofaria.kenburnsview.KenBurnsView
+                    android:id="@+id/img_appBar_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:src="@drawable/nav_back"
+                    android:scaleType="fitXY" />
+                <RelativeLayout
+                    android:id="@+id/film_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/img_appBar_background"
+                    android:background="#FAFAFA">
+
+                    <Button
+                        android:id="@+id/btn_buy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="@dimen/big_margin"
+                        android:elevation="@dimen/medium_margin"
+                        android:text="خرید اشتراک"
+                        android:textSize="13sp"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/samim_bold_fd"
+                        android:background="@drawable/btn_buy"/>
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_imDb"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:srcCompat="@drawable/ic_imdb"
+                    android:layout_alignParentLeft="true"
+                    android:layout_above="@id/film_summary"
+                    android:layout_margin="@dimen/medium_margin"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:id="@+id/txt_ranking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/img_imDb"
+                    android:layout_alignRight="@id/img_imDb"
+                    android:layout_alignLeft="@id/img_imDb"
+                    android:layout_marginBottom="-20dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/samim_fd"/>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/layout_film_cover"
+                    android:layout_width="@dimen/movie_layout_small_with"
+                    android:layout_height="155dp"
+                    android:layout_above="@+id/film_summary"
+                    android:layout_marginBottom="-25dp"
+                    android:layout_marginRight="@dimen/big_margin"
+                    app:cardCornerRadius="@dimen/small_margin"
+                    app:cardElevation="@dimen/small_margin">
+
+                    <ImageView
+                        android:id="@+id/img_movie_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:transitionName="film_cover"
+                        android:scaleType="fitXY"/>
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/txt_film_name"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/layout_film_cover"
+                    android:layout_alignTop="@+id/layout_film_cover"
+                    android:layout_marginRight="@dimen/medium_margin"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/samim_bold_fd"/>
+                <TextView
+                    android:id="@+id/txt_film_name_en"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_film_name"
+                    android:layout_alignRight="@+id/txt_film_name"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/samim_bold_fd"/>
+
+
+            </RelativeLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:popupTheme="@style/ToolbarTheme">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="@dimen/big_margin"
+                        app:srcCompat="@drawable/ic_back" />
+
+                    <TextView
+                        android:id="@+id/txt_toolbar_title"
+                        android:layout_width="185dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/img_back"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/big_margin"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        tools:text="جوان"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/samim_fd"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginEnd="@dimen/big_margin"
+                        app:srcCompat="@drawable/ic_share"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_download"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/img_share"
+                        android:layout_marginEnd="@dimen/big_margin"
+                        app:srcCompat="@drawable/ic_cloud_download"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_love_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/img_download"
+                        android:layout_marginEnd="@dimen/big_margin"
+                        app:srcCompat="@drawable/ic_turned_in_not"/>
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_single_movie" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
